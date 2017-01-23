@@ -1,0 +1,590 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Arctic Mongodb[TOC]
+一、安装GitHub:https://github.com/manahl/arctic
+windows conda 虚拟环境下 安装错误Cannot open include file: ‘stdint.h’: No such file or directory
+解决办法：Then for the stdint header issue:1) Clone t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arctic 笔记">
+<meta property="og:url" content="http://rffyu.github.io/2016/05/23/Arctic/index.html">
+<meta property="og:site_name" content="Just for fun">
+<meta property="og:description" content="Arctic Mongodb[TOC]
+一、安装GitHub:https://github.com/manahl/arctic
+windows conda 虚拟环境下 安装错误Cannot open include file: ‘stdint.h’: No such file or directory
+解决办法：Then for the stdint header issue:1) Clone t">
+<meta property="og:updated_time" content="2016-05-28T14:15:39.131Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Arctic 笔记">
+<meta name="twitter:description" content="Arctic Mongodb[TOC]
+一、安装GitHub:https://github.com/manahl/arctic
+windows conda 虚拟环境下 安装错误Cannot open include file: ‘stdint.h’: No such file or directory
+解决办法：Then for the stdint header issue:1) Clone t">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Arctic 笔记 | Just for fun </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Just for fun</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Arctic 笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-23T23:45:11+08:00" content="2016-05-23">
+              2016-05-23
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Arctic-Mongodb"><a href="#Arctic-Mongodb" class="headerlink" title="Arctic Mongodb"></a>Arctic Mongodb</h1><p>[TOC]</p>
+<h2 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h2><h3 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub:"></a>GitHub:</h3><p><a href="https://github.com/manahl/arctic" target="_blank" rel="external">https://github.com/manahl/arctic</a></p>
+<h4 id="windows-conda-虚拟环境下-安装错误"><a href="#windows-conda-虚拟环境下-安装错误" class="headerlink" title="windows conda 虚拟环境下 安装错误"></a>windows conda 虚拟环境下 安装错误</h4><p>Cannot open include file: ‘stdint.h’: No such file or directory</p>
+<p>解决办法：<br>Then for the stdint header issue:<br>1) Clone the artic github repository<br>2) download this file: <a href="http://www.azillionmonkeys.com/qed/pstdint.h" target="_blank" rel="external">http://www.azillionmonkeys.com/qed/pstdint.h</a> into the src/ folder in the local github directory you cloned<br>3) rename the file to stdint.h<br>4) run “pip install C:/path/to/github_repos/arctic”</p>
+<h2 id="二、基础"><a href="#二、基础" class="headerlink" title="二、基础"></a>二、基础</h2><h3 id="How-to-https-github-com-manahl-arctic-blob-master-howtos-how-to-use-arctic-py"><a href="#How-to-https-github-com-manahl-arctic-blob-master-howtos-how-to-use-arctic-py" class="headerlink" title="[How to][ https://github.com/manahl/arctic/blob/master/howtos/how_to_use_arctic.py]"></a>[How to][ <a href="https://github.com/manahl/arctic/blob/master/howtos/how_to_use_arctic.py" target="_blank" rel="external">https://github.com/manahl/arctic/blob/master/howtos/how_to_use_arctic.py</a>]</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> artic <span class="keyword">import</span> Arctic</span><br><span class="line"></span><br><span class="line">arctic = Arctic(<span class="string">'localhost'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化一个 VersionStore Lib</span></span><br><span class="line">arctic.initialize_library(<span class="string">'jblackburn.stocks'</span>)</span><br><span class="line">arctic.list_libraries()</span><br><span class="line"></span><br><span class="line">stocks = arctic[<span class="string">'jblackburn.stocks'</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="三、Arctic"><a href="#三、Arctic" class="headerlink" title="三、Arctic"></a>三、Arctic</h2><p>Init signature:  arctic.Arctic(self, mongo_host, app_name=’arctic’, allow_secondary=False, socketTimeoutMS=600000, connectTimeoutMS=2000, serverSelectionTimeoutMS=30000)</p>
+<p>Docstring:<br>The Arctic class is a top-level God object, owner of all arctic_<user> databases<br>accessible in Mongo.<br>Each database contains one or more ArcticLibrarys which may have implementation<br>specific functionality.</user></p>
+<p>Current Mongo Library types:</p>
+<ul>
+<li>arctic.VERSION_STORE - Versioned store for chunked Pandas and numpy objects<br> (other Python types are pickled)</li>
+<li>arctic.TICK_STORE - Tick specific library. Supports ‘snapshots’, efficiently<br> stores updates, not versioned.</li>
+</ul>
+<p>Arctic and ArcticLibrary are responsible for Connection setup, authentication,<br>dispatch to the appropriate library implementation, and quotas.</p>
+<p>Init docstring:<br>Constructs a Arctic Datastore.</p>
+<h3 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters:"></a>Parameters:</h3><p>mongo_host: A MongoDB hostname, alias or Mongo Connection</p>
+<p>app_name: <code>str</code> is the name of application used for resolving credentials when<br>   authenticating against the mongo_host.<br>   We will fetch credentials using the authentication hook.<br>   Teams should override this such that different applications don’t accidentally<br>   run with privileges to other applications’ databases</p>
+<p>allow_secondary: <code>bool</code> indicates if we allow reads against<br>   secondary members in the cluster.  These reads may be<br>   a few seconds behind (but are usually split-second up-to-date).</p>
+<p>serverSelectionTimeoutMS: <code>int</code> the main tunable used for configuring how long<br>   the pymongo driver will spend on MongoDB cluster discovery.  This parameter<br>   takes precedence over connectTimeoutMS: <a href="https://jira.mongodb.org/browse/DRIVERS-222" target="_blank" rel="external">https://jira.mongodb.org/browse/DRIVERS-222</a></p>
+<h2 id="四、lib-type"><a href="#四、lib-type" class="headerlink" title="四、lib_type"></a>四、lib_type</h2><h3 id="1、默认（Version-Store）"><a href="#1、默认（Version-Store）" class="headerlink" title="1、默认（Version_Store）"></a>1、默认（Version_Store）</h3><h3 id="2、Tick-Store"><a href="#2、Tick-Store" class="headerlink" title="2、Tick_Store"></a>2、Tick_Store</h3><p>输出时会调用系统的时区，在windows下完全没法用Tick_Store<br>具体搜索 mktz()</p>
+<h3 id="3、custom-library"><a href="#3、custom-library" class="headerlink" title="3、custom_library"></a>3、custom_library</h3><h4 id="作者的例子-https-github-com-manahl-arctic-blob-master-howtos-how-to-custom-arctic-library-py"><a href="#作者的例子-https-github-com-manahl-arctic-blob-master-howtos-how-to-custom-arctic-library-py" class="headerlink" title="[作者的例子][https://github.com/manahl/arctic/blob/master/howtos/how_to_custom_arctic_library.py]"></a>[作者的例子][<a href="https://github.com/manahl/arctic/blob/master/howtos/how_to_custom_arctic_library.py" target="_blank" rel="external">https://github.com/manahl/arctic/blob/master/howtos/how_to_custom_arctic_library.py</a>]</h4><h2 id="五、Append-Version-Store"><a href="#五、Append-Version-Store" class="headerlink" title="五、Append (Version_Store)"></a>五、Append (Version_Store)</h2><p>  Append ‘data’ under the specified ‘symbol’ name to this library.<br>  The exact meaning of ‘append’ is left up to the underlying store implementation.</p>
+<h3 id="Parameters-1"><a href="#Parameters-1" class="headerlink" title="Parameters"></a>Parameters</h3><h4 id="symbol-str"><a href="#symbol-str" class="headerlink" title="symbol : str"></a>symbol : <code>str</code></h4><p>   symbol name for the item</p>
+<h4 id="data"><a href="#data" class="headerlink" title="data :"></a>data :</h4><p>   to be persisted</p>
+<h4 id="metadata-dict"><a href="#metadata-dict" class="headerlink" title="metadata : dict"></a>metadata : <code>dict</code></h4><p>   an optional dictionary of metadata to persist along with the symbol.</p>
+<h4 id="prune-previous-version-bool"><a href="#prune-previous-version-bool" class="headerlink" title="prune_previous_version : bool"></a>prune_previous_version : <code>bool</code></h4><p>   Removes previous (non-snapshotted) versions from the database.<br>   Default: True</p>
+<h4 id="upsert-bool"><a href="#upsert-bool" class="headerlink" title="upsert : bool"></a>upsert : <code>bool</code></h4><p>   Write ‘data’ if no previous version exists.</p>
+<p>   Default: True</p>
+<h3 id="MetaData"><a href="#MetaData" class="headerlink" title="MetaData"></a>MetaData</h3><p>同样适用于lib.write</p>
+<p>eg:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># metadata 需要是字典</span><br><span class="line">lib.append(symbol='test', data=df, metadata=&#123;'period':&#123;'start':..,'end':..&#125;&#125;)</span><br><span class="line"></span><br><span class="line"># 直接调用read_metadata</span><br><span class="line">lib.read_metadata().metadata</span><br><span class="line">--&gt; &#123;'period':&#123;'start':..,'end':..&#125;&#125;</span><br><span class="line">lib.read_metadata().metadata_dict()</span><br><span class="line">--&gt; &#123;'library': 'arctic_forex.bar', 'symbol': 'test', 'version': 6&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="check-quota"><a href="#check-quota" class="headerlink" title="check_quota"></a>check_quota</h3><h2 id="六、read-Version-Store"><a href="#六、read-Version-Store" class="headerlink" title="六、read (Version_Store)"></a>六、read (Version_Store)</h2><p>Signature: lib.read(symbol, as_of=None, date_range=None, from_version=None,  allow_secondary=None, **kwargs)<br>Docstring:<br>Read data for the named symbol.  Returns a VersionedItem object with a data and metdata element (as passed into write).</p>
+<h3 id="Parameters："><a href="#Parameters：" class="headerlink" title="Parameters："></a>Parameters：</h3><p>symbol : <code>str</code><br>   symbol name for the item<br>as_of : <code>str</code> or int or <code>datetime.datetime</code><br>   Return the data as it was as_of the point in time.<br>   <code>int</code> : specific version number<br>   <code>str</code> : snapshot name which contains the version<br>   <code>datetime.datetime</code> : the version of the data that existed as_of the requested point in time<br>date_range: <code>arctic.date.DateRange</code><br>   DateRange to read data for.  Applies to Pandas data, with a DateTime index<br>   returns only the part of the data that falls in the DateRange.<br>allow_secondary : <code>bool</code> or <code>None</code><br>   Override the default behavior for allowing reads from secondary members of a cluster:<br>   <code>None</code> : use the settings from the top-level <code>Arctic</code> object used to query this version store.<br>   <code>True</code> : allow reads from secondary members<br>   <code>False</code> : only allow reads from primary members</p>
+<h3 id="Returns："><a href="#Returns：" class="headerlink" title="Returns："></a>Returns：</h3><p>VersionedItem namedtuple which contains a .data and .metadata element</p>
+<h3 id="关于date-range"><a href="#关于date-range" class="headerlink" title="关于date_range:"></a>关于date_range:</h3><p>如果数据库中的数据不是按顺序存储的， 可能会造成找不到请求的时间段<br>可能会报InvalidDocument , KeyError , 或者返回空的df</p>
+<h4 id="调用顺序："><a href="#调用顺序：" class="headerlink" title="调用顺序："></a>调用顺序：</h4><p>read(date_range) –&gt; </p>
+<p>self._do_read(date_range = date_range) as kwargs –&gt;</p>
+<p>handler = self._read_handler()–&gt; </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> h <span class="keyword">in</span> _TYPE_HANDLERS:</span><br><span class="line">  <span class="keyword">if</span> h.can_read(version, symbol):</span><br><span class="line">    handler = h</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> handler</span><br></pre></td></tr></table></figure>
+<p>–&gt; handler.read(… , **kwargs)</p>
+<h2 id="七、多线程-多进程"><a href="#七、多线程-多进程" class="headerlink" title="七、多线程/多进程"></a>七、多线程/多进程</h2><p> 不能同时操作一个symbol， 不然可能会报各种奇怪的错误</p>
+<p><a href="https://github.com/manahl/arctic/issues/138" target="_blank" rel="external">https://github.com/manahl/arctic/issues/138</a></p>
+<p>In short, if you’re appending to a symbol, don’t append to the same symbol concurrently from multiple threads (or processes) without enforcing the ordering of the appends yourself (even then, probably not a good idea). If you’re just writing (and reading the data back with the versions you wrote), concurrent write/read on the same symbol is OK, but can sometimes be confusing. Concurrent writes (or appends) to different symbols should always be fine.</p>
+<h2 id="八、事务-Transaction"><a href="#八、事务-Transaction" class="headerlink" title="八、事务(Transaction)"></a>八、事务(Transaction)</h2><h3 id="1、数据库事务"><a href="#1、数据库事务" class="headerlink" title="1、数据库事务"></a>1、数据库事务</h3><h4 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h4><p>一个数据库事务通常包含了一个序列的对数据库的读/写操作。它的存在包含有以下两个目的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1、为数据库操作序列提供了一个从失败中恢复到正常状态的方法，同时提供了数据库即使在异常状态下仍能保持一致性的方法。</span><br><span class="line">2、当多个应用程序在并发访问数据库时，可以在这些应用程序之间提供一个隔离方法，以防止彼此的操作互相干扰。</span><br></pre></td></tr></table></figure></p>
+<h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><p>并非任意的对数据库的操作序列都是数据库事务。事务应该具有4个属性：原子性、一致性、隔离性、持久性。这四个属性通常称为ACID特性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">原子性（Atomicity）：事务作为一个整体被执行，包含在其中的对数据库的操作要么全部被执行，要么都不执行。</span><br><span class="line">一致性（Consistency）：事务应确保数据库的状态从一个一致状态转变为另一个一致状态。一致状态的含义是数据库中的数据应满足完整性约束。</span><br><span class="line">隔离性（Isolation）：多个事务并发执行时，一个事务的执行不应影响其他事务的执行。</span><br><span class="line">持久性（Durability）：一个事务一旦提交，他对数据库的修改应该永久保存在数据库中。</span><br></pre></td></tr></table></figure></p>
+<h3 id="2、Arctic-audit（Version-Store）"><a href="#2、Arctic-audit（Version-Store）" class="headerlink" title="2、Arctic audit（Version_Store）"></a>2、Arctic audit（Version_Store）</h3><h4 id="write-audit-user-message-changed-version"><a href="#write-audit-user-message-changed-version" class="headerlink" title="_write_audit(user, message, changed_version)"></a>_write_audit(user, message, changed_version)</h4><p>   Creates an audit entry, which is much like a snapshot in that<br>   it references versions and provides some history of the changes made.</p>
+<h4 id="read-audit-log-symbol"><a href="#read-audit-log-symbol" class="headerlink" title="read_audit_log(symbol)"></a>read_audit_log(symbol)</h4><p>  Return the audit log associated with a given symbol</p>
+<h3 id="3、arctic-store-audit-ArcticTransaction"><a href="#3、arctic-store-audit-ArcticTransaction" class="headerlink" title="3、arctic. store. audit. ArcticTransaction"></a>3、arctic. store. audit. ArcticTransaction</h3><p>这里引用了ArcticTransaction类<br><code>arctic\scripts\arctic_copy_data.py</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Use this context manager if you want to modify data in a version store while ensuring that no other writes interfere with your own.</span><br><span class="line"></span><br><span class="line">To use, base your modifications on the `base_ts` context manager field and put your newly created timeseries and call the `write` method of the context manager to output changes. The changes will only be written when the block exits.</span><br><span class="line">    </span><br><span class="line">NB changes may be audited.</span><br></pre></td></tr></table></figure></p>
+<p>Example:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> ArcticTransaction(Arctic(<span class="string">'hostname'</span>)[<span class="string">'some_library'</span>], <span class="string">'symbol'</span>) <span class="keyword">as</span> mt:</span><br><span class="line">    ts_version_info = mt.base_ts</span><br><span class="line">    <span class="comment"># do some processing, come up with a new ts for 'symbol' called new_symbol_ts, presumably based on ts_version_info.data</span></span><br><span class="line">    mt.write(<span class="string">'symbol'</span>, new_symbol_ts, metadata=new_symbol_metadata)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The block will raise a ConcurrentModificationException if an inconsistency has been detected. You will have to retry the whole block should that happens, as the assumption is that you need to base your changes on a different starting timeseries.</span><br></pre></td></tr></table></figure>
+<p>windows 下无法使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">\site-packages\arctic\store\audit.py in __exit__(self, *args, **kwargs)</span><br><span class="line">    134         if self._do_write:</span><br><span class="line">    135             written_ver = self._write()</span><br><span class="line">--&gt; 136             versions = [x[&apos;version&apos;] for x in self._version_store.list_versions(self._symbol)]</span><br><span class="line">    137             versions.append(0)</span><br><span class="line">    138             versions.reverse()</span><br><span class="line"></span><br><span class="line">\site-packages\arctic\store\version_store.py in list_versions(self, symbol, snapshot, latest_only)</span><br><span class="line">    253                                  &apos;deleted&apos;: meta.get(&apos;deleted&apos;, False) if meta else False,</span><br><span class="line">    254                                  # We return offset-aware datetimes in Local Time.</span><br><span class="line">--&gt; 255                                  &apos;date&apos;: ms_to_datetime(datetime_to_ms(version[&apos;_id&apos;].generation_time)),</span><br><span class="line">    256                                  &apos;snapshots&apos;: self._find_snapshots(version.get(&apos;parent&apos;, []))&#125;)</span><br><span class="line">    257         return versions</span><br><span class="line"></span><br><span class="line">\site-packages\arctic\date\_util.py in ms_to_datetime(ms, tzinfo)</span><br><span class="line">    150</span><br><span class="line">    151     if tzinfo is None:</span><br><span class="line">--&gt; 152         tzinfo = mktz()</span><br><span class="line">    153</span><br><span class="line">    154     return datetime.datetime.fromtimestamp(ms * 1e-3, tzinfo)</span><br><span class="line"></span><br><span class="line">\site-packages\arctic\date\_mktz.py in mktz(zone)</span><br><span class="line">     69         tz = tzfile(_path)</span><br><span class="line">     70     except (ValueError, IOError) as err:</span><br><span class="line">---&gt; 71         raise TimezoneError(&apos;Timezone &quot;%s&quot; can not be read, error: &quot;%s&quot;&apos; % (zone, err))</span><br><span class="line">     72     # Stash the zone name as an attribute (as pytz does)</span><br><span class="line">     73     tz.zone = zone if not zone.startswith(TIME_ZONE_DATA_SOURCE) else zone[len(TIME_ZONE_DATA_SOURCE):]</span><br><span class="line"></span><br><span class="line">TimezoneError: Timezone &quot;Asia/Shanghai&quot; can not be read, error: &quot;[Errno 2] No such file or directory: &apos;/usr/share/zoneinfo/Asia/Shanghai&apos;&quot;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/06/Pyxley/" rel="next" title="Pyxley">
+                <i class="fa fa-chevron-left"></i> Pyxley
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpeg"
+               alt="rffyu" />
+          <p class="site-author-name" itemprop="name">rffyu</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Arctic-Mongodb"><span class="nav-number">1.</span> <span class="nav-text">Arctic Mongodb</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、安装"><span class="nav-number">1.1.</span> <span class="nav-text">一、安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub"><span class="nav-number">1.1.1.</span> <span class="nav-text">GitHub:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#windows-conda-虚拟环境下-安装错误"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">windows conda 虚拟环境下 安装错误</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、基础"><span class="nav-number">1.2.</span> <span class="nav-text">二、基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-https-github-com-manahl-arctic-blob-master-howtos-how-to-use-arctic-py"><span class="nav-number">1.2.1.</span> <span class="nav-text">[How to][ https://github.com/manahl/arctic/blob/master/howtos/how_to_use_arctic.py]</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、Arctic"><span class="nav-number">1.3.</span> <span class="nav-text">三、Arctic</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Parameters"><span class="nav-number">1.3.1.</span> <span class="nav-text">Parameters:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、lib-type"><span class="nav-number">1.4.</span> <span class="nav-text">四、lib_type</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、默认（Version-Store）"><span class="nav-number">1.4.1.</span> <span class="nav-text">1、默认（Version_Store）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、Tick-Store"><span class="nav-number">1.4.2.</span> <span class="nav-text">2、Tick_Store</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、custom-library"><span class="nav-number">1.4.3.</span> <span class="nav-text">3、custom_library</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#作者的例子-https-github-com-manahl-arctic-blob-master-howtos-how-to-custom-arctic-library-py"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">[作者的例子][https://github.com/manahl/arctic/blob/master/howtos/how_to_custom_arctic_library.py]</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、Append-Version-Store"><span class="nav-number">1.5.</span> <span class="nav-text">五、Append (Version_Store)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Parameters-1"><span class="nav-number">1.5.1.</span> <span class="nav-text">Parameters</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#symbol-str"><span class="nav-number">1.5.1.1.</span> <span class="nav-text">symbol : str</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#data"><span class="nav-number">1.5.1.2.</span> <span class="nav-text">data :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#metadata-dict"><span class="nav-number">1.5.1.3.</span> <span class="nav-text">metadata : dict</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#prune-previous-version-bool"><span class="nav-number">1.5.1.4.</span> <span class="nav-text">prune_previous_version : bool</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#upsert-bool"><span class="nav-number">1.5.1.5.</span> <span class="nav-text">upsert : bool</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MetaData"><span class="nav-number">1.5.2.</span> <span class="nav-text">MetaData</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#check-quota"><span class="nav-number">1.5.3.</span> <span class="nav-text">check_quota</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、read-Version-Store"><span class="nav-number">1.6.</span> <span class="nav-text">六、read (Version_Store)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Parameters："><span class="nav-number">1.6.1.</span> <span class="nav-text">Parameters：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Returns："><span class="nav-number">1.6.2.</span> <span class="nav-text">Returns：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于date-range"><span class="nav-number">1.6.3.</span> <span class="nav-text">关于date_range:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#调用顺序："><span class="nav-number">1.6.3.1.</span> <span class="nav-text">调用顺序：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、多线程-多进程"><span class="nav-number">1.7.</span> <span class="nav-text">七、多线程/多进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、事务-Transaction"><span class="nav-number">1.8.</span> <span class="nav-text">八、事务(Transaction)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、数据库事务"><span class="nav-number">1.8.1.</span> <span class="nav-text">1、数据库事务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#概要"><span class="nav-number">1.8.1.1.</span> <span class="nav-text">概要</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特性"><span class="nav-number">1.8.1.2.</span> <span class="nav-text">特性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、Arctic-audit（Version-Store）"><span class="nav-number">1.8.2.</span> <span class="nav-text">2、Arctic audit（Version_Store）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#write-audit-user-message-changed-version"><span class="nav-number">1.8.2.1.</span> <span class="nav-text">_write_audit(user, message, changed_version)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#read-audit-log-symbol"><span class="nav-number">1.8.2.2.</span> <span class="nav-text">read_audit_log(symbol)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、arctic-store-audit-ArcticTransaction"><span class="nav-number">1.8.3.</span> <span class="nav-text">3、arctic. store. audit. ArcticTransaction</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rffyu</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
